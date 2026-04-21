@@ -2,12 +2,13 @@ import { useState } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const logoSrc = `${import.meta.env.BASE_URL}logo.jpg`;
 
   return (
     <header className="fixed w-full top-0 z-50 bg-[#0A0A0A]/80 backdrop-blur-md border-b border-[#00F0FF]/20">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Cumbuca Labs" className="h-12 w-12" />
+          <img src={logoSrc} alt="Cumbuca Labs" className="h-12 w-12" />
           <span className="text-xl font-bold glow-text">CUMBUCA LABS</span>
         </div>
 

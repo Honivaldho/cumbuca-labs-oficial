@@ -1,5 +1,3 @@
-import React from 'react';
-
 const About = () => {
   const team = [
     { name: 'Onivaldo Pereira', role: 'Fundador & PM' },
@@ -8,37 +6,18 @@ const About = () => {
   ];
 
   return (
-    <section
-      style={{
-        backgroundColor: '#0A0A0A',
-        padding: '60px 20px',
-        color: 'white',
-        borderTop: '1px solid #222',
-      }}
-    >
-      <h2 style={{ textAlign: 'center', color: '#00F0FF', marginBottom: '40px' }}>Nossa Equipe</h2>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '30px',
-          maxWidth: '1000px',
-          margin: '0 auto',
-        }}
-      >
+    <section id="about" className="bg-[#0A0A0A] py-16 px-5 text-white border-t border-white/10">
+      <h2 className="text-center text-3xl md:text-4xl font-extrabold text-[#00F0FF] mb-10 drop-shadow-[0_0_18px_rgba(0,240,255,0.35)]">
+        Nossa Equipe
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {team.map((m, i) => (
           <div
             key={i}
-            style={{
-              padding: '30px',
-              borderRadius: '20px',
-              border: '1px solid #333',
-              textAlign: 'center',
-              background: '#111',
-            }}
+            className="rounded-2xl border border-[#00F0FF]/15 bg-[#0F1115]/70 backdrop-blur-sm p-8 text-center hover:border-[#00F0FF]/30 hover:shadow-[0_0_30px_rgba(0,240,255,0.10)] transition"
           >
-            <h3 style={{ margin: '0', fontSize: '1.4rem' }}>{m.name}</h3>
-            <p style={{ color: '#00F0FF', fontSize: '0.9rem', marginTop: '5px' }}>{m.role}</p>
+            <h3 className="m-0 text-xl font-bold text-white">{m.name}</h3>
+            <p className="text-[#00F0FF] text-sm mt-2">{m.role}</p>
           </div>
         ))}
       </div>

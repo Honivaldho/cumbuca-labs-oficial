@@ -1,64 +1,26 @@
-import React from 'react';
-
 const Hero = () => {
+  const logoSrc = `${import.meta.env.BASE_URL}logo.jpg`;
+
   return (
     <section
-      style={{
-        minHeight: '80vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-        backgroundColor: '#0A0A0A',
-        padding: '40px 20px',
-      }}
+      id="home"
+      className="min-h-[80vh] flex flex-col items-center justify-center text-center bg-[#0A0A0A] px-5 py-16"
     >
       <img
-        src="/logo.png"
+        src={logoSrc}
         alt="Cumbuca Labs"
-        style={{
-          width: '100%',
-          maxWidth: '280px',
-          marginBottom: '1.5rem',
-          filter: 'drop-shadow(0 0 10px rgba(0,240,255,0.3))',
-        }}
+        className="w-full max-w-[280px] mx-auto mb-6 drop-shadow-[0_0_10px_rgba(0,240,255,0.35)]"
       />
-      <h1
-        style={{
-          fontSize: '3.5rem',
-          fontWeight: '900',
-          margin: '0',
-          color: '#00F0FF',
-          textShadow: '0 0 20px rgba(0,240,255,0.5)',
-          letterSpacing: '-1px',
-        }}
-      >
+      <h1 className="m-0 text-[2.6rem] sm:text-[3.2rem] md:text-[3.5rem] font-black tracking-[-0.02em] text-[#00F0FF] drop-shadow-[0_0_20px_rgba(0,240,255,0.5)]">
         CUMBUCA LABS
       </h1>
-      <p
-        style={{
-          color: '#ccc',
-          fontSize: '1.2rem',
-          marginTop: '1rem',
-          maxWidth: '500px',
-          lineHeight: '1.6',
-        }}
-      >
+      <p className="text-gray-300 text-base sm:text-lg mt-4 max-w-[520px] leading-relaxed">
         Estúdio Independente de Games. Criando universos digitais com alma brasileira.
       </p>
-      <div style={{ marginTop: '2.5rem', display: 'flex', gap: '20px', justifyContent: 'center' }}>
+      <div className="mt-10 flex flex-wrap gap-4 justify-center">
         <button
-          style={{
-            backgroundColor: '#00F0FF',
-            color: 'black',
-            padding: '15px 35px',
-            borderRadius: '50px',
-            fontWeight: 'bold',
-            border: 'none',
-            boxShadow: '0 0 15px rgba(0,240,255,0.4)',
-            cursor: 'pointer',
-          }}
+          type="button"
+          className="btn-primary"
         >
           Nossos Jogos
         </button>

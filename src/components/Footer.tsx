@@ -1,14 +1,14 @@
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const logoSrc = `${import.meta.env.BASE_URL}logo.jpg`;
 
   return (
     <footer className="bg-[#0A0A0A] border-t border-[#00F0FF]/20 py-12">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
-          {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="/logo.png" alt="Cumbuca Labs" className="h-8 w-8" />
+              <img src={logoSrc} alt="Cumbuca Labs" className="h-8 w-8" />
               <span className="text-lg font-bold glow-text">CUMBUCA LABS</span>
             </div>
             <p className="text-gray-400 text-sm">
@@ -16,7 +16,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-[#00F0FF] font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -27,7 +26,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h4 className="text-[#39FF14] font-bold mb-4">Serviços</h4>
             <ul className="space-y-2">
@@ -38,7 +36,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="text-[#8A2BE2] font-bold mb-4">Contato</h4>
             <ul className="space-y-2">
@@ -50,7 +47,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
         <div className="border-t border-[#00F0FF]/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
             <p>&copy; {currentYear} Cumbuca Labs. All rights reserved.</p>

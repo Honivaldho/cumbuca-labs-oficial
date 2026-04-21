@@ -1,10 +1,34 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-body {
-  background-color: #0A0A0A !important;
-  color: white !important;
-  margin: 0;
-  font-family: sans-serif;
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-[#0A0A0A] text-white antialiased;
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+      "Apple Color Emoji", "Segoe UI Emoji";
+  }
+}
+
+@layer utilities {
+  .glow-text {
+    @apply text-[#00F0FF] drop-shadow-[0_0_14px_rgba(0,240,255,0.45)];
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-[#00F0FF]/15 bg-[#0F1115]/70 backdrop-blur-sm p-8
+      hover:border-[#00F0FF]/30 hover:shadow-[0_0_30px_rgba(0,240,255,0.10)] transition;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-[#00F0FF] text-black font-bold
+      px-9 py-3 shadow-[0_0_18px_rgba(0,240,255,0.35)] hover:shadow-[0_0_28px_rgba(0,240,255,0.55)]
+      transition;
+  }
 }
